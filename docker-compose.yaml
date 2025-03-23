@@ -8,5 +8,7 @@ services:
       - ./src/:/usr/src/app/
     ports:
       - "8000:${APP_PORT}"
+    environment:
+      - APP_PORT=8000
 networks:
   default:
