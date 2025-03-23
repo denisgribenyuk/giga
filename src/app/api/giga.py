@@ -1,6 +1,4 @@
 from fastapi import APIRouter, HTTPException, Path, Request
-from typing import List
-from datetime import datetime as dt
 
 router = APIRouter()
 
@@ -11,7 +9,7 @@ async def create_item():
 
 
 @router.get("/{id}/")
-async def read_item(id: int = Path(..., gt=0), ):
+async def read_item(id: int = Path(..., gt=0) ):
     return "ok"
 
 

@@ -2,8 +2,6 @@ from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from app.api import ping
-from app.config import logger
 from src.app.api import giga
 
 
