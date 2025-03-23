@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from src.app.api import giga
+from .api.giga import router as giga_router
 
 
 
@@ -16,4 +16,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(giga.router, prefix="/giga", tags=["giga"])
+app.include_router(giga_router, prefix="/giga", tags=["giga"])
